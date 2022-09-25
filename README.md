@@ -1,3 +1,20 @@
+For Raspberry Pi 3B (credits to [zoltaden](https://github.com/zoldaten) on https://github.com/brektrou/rtl8821CU/issues/184):
+
+```
+sudo apt-get update
+sudo apt-get install dkms
+sudo apt-get update && sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
+sudo apt-get install raspberrypi-kernel-headers
+reboot
+git clone https://github.com/brektrou/rtl8821CU.git
+cd rtl8821CU
+sudo ./dkms-install.sh
+```
+
+---
+
+ORIGINAL README.md
+
 # Realtek RTL8811CU/RTL8821CU USB wifi adapter driver version 5.4.1 for Linux 4.4.x up to 5.x
 
 Before build this driver make sure `make`, `gcc`, `linux-header`/`kernel-devel`, `bc` and `git` have been installed.
